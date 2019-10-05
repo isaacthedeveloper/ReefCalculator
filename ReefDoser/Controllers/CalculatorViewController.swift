@@ -10,7 +10,7 @@ import UIKit
 
 class CalculatorViewController: UIViewController, UITextFieldDelegate {
     var chosenProduct: ProductName!
-    var directionsVC: DirectionsViewController?
+    //var directionsVC: DirectionsViewController?
     static let identifier = "ShowDetail"
     var result = Double()
     // MARK: - Outlets
@@ -59,14 +59,33 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
+        guard let cardViewController = storyboard?.instantiateViewController(identifier: "CardViewController") as? CardViewController else {
+            assertionFailure("Failed to find a view controlled with ID CardViewController in storyboard")
+            return
+        }
+        
+        // When tapped the button fades then comes back, this block delays the snapshot so that the button is in the snapshot. Not necesarry, but nice.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            // Take a snapshot of the vurrent view and set it as backingImage
+            // cardViewController.backingImage = self.tabBarController?.view.asImage()
+            cardViewController.backingImage = self.view.asImage()
+            // Present the VC modally
+            cardViewController.results = self.result
+            cardViewController.chosenProduct = self.chosenProduct
+            self.present(cardViewController, animated: false, completion: nil)
+        }
+        
+        
+        // iOS13 changed the modal presentation
+        cardViewController.modalPresentationStyle = .fullScreen
         if chosenProduct.productCategory == .phosphate || chosenProduct.productCategory == .trace {
             configureProducts()
-            performSegue(withIdentifier: "ShowDetail", sender: sender)
+            
         } else {
             checkDataInput()
             configureProducts()
-            performSegue(withIdentifier: "ShowDetail", sender: sender)
         }
+        
     }
     
     @IBAction func textFieldChanged(_ sender: UITextField) {
@@ -98,11 +117,11 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             currentLevelTextField.isHidden = true
             targetLevelTextField.isHidden = true
         } else {
-        waterVolumeTextField.layer.cornerRadius = 40.0
-        currentLevelTextField.layer.cornerRadius = 20.0
-        targetLevelTextField.layer.cornerRadius = 20.0
-        calculateButton.layer.cornerRadius = 40
-    }
+            waterVolumeTextField.layer.cornerRadius = 40.0
+            currentLevelTextField.layer.cornerRadius = 20.0
+            targetLevelTextField.layer.cornerRadius = 20.0
+            calculateButton.layer.cornerRadius = 40
+        }
     }
     
     func hideFields() {
@@ -112,6 +131,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         targetLevelTextField.isHidden = true
     }
     
+    
+    
     // MARK: - Product Switch Statment
     // TODO: - instead of convertToLiter try using the unit converter.
     func configureProducts() {
@@ -119,8 +140,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         let current = Double(currentLevelTextField.text!) ?? 0
         let target  = Double(targetLevelTextField.text!) ?? 0
         let ratio    = chosenProduct.productRatio
-        let waterInGallons = Measurement(value: volume, unit: UnitVolume.gallons)
-        let waterInLiters = waterInGallons.converted(to: .liters)
+        
         
         let convertToLiter = 3.785
         
@@ -128,7 +148,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             volume = volume / convertToLiter
             
         }
-
+        
         
         self.resignFirstResponder()
         
@@ -239,14 +259,9 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         present(alertController, animated: true, completion: nil)
     }
     
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == CalculatorViewController.identifier {
-            let directionsVC = segue.destination as! DirectionsViewController
-            directionsVC.chosenProduct = chosenProduct
-            directionsVC.results = result
-        }
-    }
+    
+    
+    
 }
 
 

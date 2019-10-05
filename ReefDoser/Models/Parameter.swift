@@ -9,18 +9,17 @@
 import Foundation
 
 struct Parameter{
-    var parameterName: String
+    var parameterName:   String
     var parameterSymbol: String
-    var productName: [ProductName]
+    var productName:     [ProductName]
     
 }
 
 struct ProductName {
-    var name: String
-    var productType: ProductComposition
-    var productRatio: Double
+    var name:            String
+    var productType:     ProductComposition
+    var productRatio:    Double
     var productCategory: ProductType
-    
 }
 
 enum ProductType: String {

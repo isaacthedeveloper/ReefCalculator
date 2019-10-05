@@ -20,7 +20,7 @@ class ProductSelectionViewController: UITableViewController, UINavigationControl
         navigationItem.title = "\(parameter) Additives"
         navigationItem.largeTitleDisplayMode = .never
         print(userDefaults)
-     
+        
     }
     
     
@@ -38,9 +38,9 @@ class ProductSelectionViewController: UITableViewController, UINavigationControl
         return cell
     }
     
-  
-
-   
+    
+    
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationVC = segue.destination as? CalculatorViewController else { fatalError("ERROR DID NOT PERFROM THE CORRECT SEGUE") }
@@ -52,7 +52,7 @@ class ProductSelectionViewController: UITableViewController, UINavigationControl
                 
                 
                 destinationVC.chosenProduct = chosenProduct
-
+                
             }
         }
     }

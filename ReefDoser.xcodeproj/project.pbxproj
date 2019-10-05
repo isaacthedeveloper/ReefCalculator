@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4529E2552346D584009E07B7 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529E2542346D584009E07B7 /* CardViewController.swift */; };
 		454C99BB23199050006A5F04 /* ProductSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C99BA23199050006A5F04 /* ProductSelectionViewController.swift */; };
 		459600E62328900D0012286A /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459600E52328900D0012286A /* CalculatorViewController.swift */; };
-		45B51DE0233978C5000B37BA /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B51DDF233978C5000B37BA /* DirectionsViewController.swift */; };
-		45B51DE223397C0D000B37BA /* DImmingPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B51DE123397C0D000B37BA /* DImmingPresentation.swift */; };
+		45B7617B2346D75E00ED85CA /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7617A2346D75E00ED85CA /* UIView+Snapshot.swift */; };
 		45C3DBAE232711EF005F4A7F /* Parameter&ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C3DBAD232711EF005F4A7F /* Parameter&ProductData.swift */; };
 		45C3F5662318633B00B4269C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C3F5652318633B00B4269C /* AppDelegate.swift */; };
 		45C3F5682318633B00B4269C /* ParameterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C3F5672318633B00B4269C /* ParameterSelectionViewController.swift */; };
@@ -24,10 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4529E2542346D584009E07B7 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		454C99BA23199050006A5F04 /* ProductSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductSelectionViewController.swift; path = ReefDoser/Controllers/ProductSelectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		459600E52328900D0012286A /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
-		45B51DDF233978C5000B37BA /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
-		45B51DE123397C0D000B37BA /* DImmingPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DImmingPresentation.swift; sourceTree = "<group>"; };
+		45B7617A2346D75E00ED85CA /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		45C3DBAD232711EF005F4A7F /* Parameter&ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parameter&ProductData.swift"; sourceTree = "<group>"; };
 		45C3F5622318633B00B4269C /* ReefDoser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReefDoser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C3F5652318633B00B4269C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 		45CC23E02318B91500E45BD6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4529E2542346D584009E07B7 /* CardViewController.swift */,
 				459600E52328900D0012286A /* CalculatorViewController.swift */,
-				45B51DDF233978C5000B37BA /* DirectionsViewController.swift */,
-				45B51DE123397C0D000B37BA /* DImmingPresentation.swift */,
+				45B7617A2346D75E00ED85CA /* UIView+Snapshot.swift */,
 				454C99BA23199050006A5F04 /* ProductSelectionViewController.swift */,
 				45C3F5672318633B00B4269C /* ParameterSelectionViewController.swift */,
 			);
@@ -204,13 +204,13 @@
 			files = (
 				459600E62328900D0012286A /* CalculatorViewController.swift in Sources */,
 				45C3F5682318633B00B4269C /* ParameterSelectionViewController.swift in Sources */,
-				45B51DE0233978C5000B37BA /* DirectionsViewController.swift in Sources */,
 				45C3F57823186ADC00B4269C /* ColumnFlowLayout.swift in Sources */,
-				45B51DE223397C0D000B37BA /* DImmingPresentation.swift in Sources */,
+				45B7617B2346D75E00ED85CA /* UIView+Snapshot.swift in Sources */,
 				45C3F5662318633B00B4269C /* AppDelegate.swift in Sources */,
 				45C3F57E23186D8A00B4269C /* Parameter.swift in Sources */,
 				454C99BB23199050006A5F04 /* ProductSelectionViewController.swift in Sources */,
 				45C3F57C23186D0700B4269C /* Utilities.swift in Sources */,
+				4529E2552346D584009E07B7 /* CardViewController.swift in Sources */,
 				45C3DBAE232711EF005F4A7F /* Parameter&ProductData.swift in Sources */,
 				45C3F57A23186C2900B4269C /* ParameterCell.swift in Sources */,
 			);
@@ -359,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SKR3LP38N7;
 				INFOPLIST_FILE = ReefDoser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -366,6 +367,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isaacballas.ReefDoser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -378,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SKR3LP38N7;
 				INFOPLIST_FILE = ReefDoser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -385,6 +388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isaacballas.ReefDoser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
