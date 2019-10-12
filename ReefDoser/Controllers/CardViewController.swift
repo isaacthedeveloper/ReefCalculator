@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+final class CardViewController: UIViewController {
     var chosenProduct: ProductName!
     var results = Double()
     // Default card view state
@@ -43,6 +43,7 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         configureLabel(for: results)
         // Update the backing image view
         backingImageView.image = backingImage

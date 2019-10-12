@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColumnFlowLayout: UICollectionViewFlowLayout {
+final class ColumnFlowLayout: UICollectionViewFlowLayout {
     
     private let minColumnWidth: CGFloat = 300.0
     private let cellHeight: CGFloat = 100.0

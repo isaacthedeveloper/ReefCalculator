@@ -12,7 +12,6 @@ struct Parameter{
     var parameterName:   String
     var parameterSymbol: String
     var productName:     [ProductName]
-    
 }
 
 struct ProductName {

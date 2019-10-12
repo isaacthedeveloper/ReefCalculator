@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController, UITextFieldDelegate {
+final class CalculatorViewController: UIViewController, UITextFieldDelegate {
     var chosenProduct: ProductName!
     //var directionsVC: DirectionsViewController?
     static let identifier = "ShowDetail"
@@ -63,7 +63,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             assertionFailure("Failed to find a view controlled with ID CardViewController in storyboard")
             return
         }
-        
+
         // When tapped the button fades then comes back, this block delays the snapshot so that the button is in the snapshot. Not necesarry, but nice.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             // Take a snapshot of the vurrent view and set it as backingImage
@@ -74,7 +74,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             cardViewController.chosenProduct = self.chosenProduct
             self.present(cardViewController, animated: false, completion: nil)
         }
-        
         
         // iOS13 changed the modal presentation
         cardViewController.modalPresentationStyle = .fullScreen
@@ -98,8 +97,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         let volume  = waterVolumeTextField.text!
         if volume.isEmpty || current.isEmpty || target.isEmpty {
             fillInFieldsAlert()
-        } else if current > target {
-            targetIsGreaterThanCurrent()
         }
     }
     
@@ -131,8 +128,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         targetLevelTextField.isHidden = true
     }
     
-    
-    
     // MARK: - Product Switch Statment
     // TODO: - instead of convertToLiter try using the unit converter.
     func configureProducts() {
@@ -140,18 +135,12 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         let current = Double(currentLevelTextField.text!) ?? 0
         let target  = Double(targetLevelTextField.text!) ?? 0
         let ratio    = chosenProduct.productRatio
-        
-        
         let convertToLiter = 3.785
-        
         if waterUnitSegmentedControl.selectedSegmentIndex == 1 {
             volume = volume / convertToLiter
             
         }
-        
-        
         self.resignFirstResponder()
-        
         switch chosenProduct.name {
         case aquaForestKHPlus.name, brightwellAlk.name, brightwellReefCodeB.name, brightwellNanoCodeB.name, redseaReefFoundationB.name, esvp1.name, esvp2.name:
             // this is the result if a user used gallons, but the total result should be divided by liter
@@ -175,10 +164,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         // CALCIUM
         case aquaForestCAPlus.name, redseaReefFoundationA.name:
             result = calculateCalLiq(with: ratio, from: current, to: target, volume: volume)
-            
         case aquaForestCAP.name, bwCalcionPow.name, bwReefCodeAPow.name, fpCalChlo.name, tlfCa.name, esvbc2.name, kentTurbo.name, redseaReefFoundationAPow.name:
             result = calculateLiquidAlk(with: ratio, from: current, to: target, volume: volume)
-            
         case bwNanoCodeA.name, kentTech.name, bwReefCodeALiq.name, bwCalcionLiq.name, seachemReefFusion1L.name:
             result = calculateCalcium(with: ratio, from: current, to: target, volume: volume)
         case seachemReefAdv.name, seachemReefComp.name:

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductSelectionViewController: UITableViewController, UINavigationControllerDelegate {
+final class ProductSelectionViewController: UITableViewController, UINavigationControllerDelegate {
     var products = [ProductName]()
     var parameter = String()
     let defaults = UserDefaults.standard
@@ -22,10 +22,7 @@ class ProductSelectionViewController: UITableViewController, UINavigationControl
         print(userDefaults)
         
     }
-    
-    
-    
-    
+
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count

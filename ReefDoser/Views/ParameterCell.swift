@@ -8,7 +8,7 @@
 
 
 import UIKit
-class ParameterCell: UICollectionViewCell {
+final class ParameterCell: UICollectionViewCell {
   static let identifier = "ParameterCell"
   let bgView            = UIView()
   let nameLabel         = UILabel()

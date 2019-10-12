@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParameterSelectionViewController: UICollectionViewController {
+final class ParameterSelectionViewController: UICollectionViewController {
     let productSegueIdentifier = "goToProductViewController"
     var flowLayout = ColumnFlowLayout()
     lazy var parameters = parameterData()
