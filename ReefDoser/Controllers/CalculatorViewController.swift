@@ -23,7 +23,7 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var transparentView: UIView!
     // Gesture Recognizer to dismiss the keyboard on swipe or on tap.
-    // TODO: - Move this into an extension - nvm, keep it and show you can do it both ways.
+
     @IBOutlet weak var calculatorView: UIView! {
         didSet {
             let swipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeKeyboard))
@@ -97,6 +97,8 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
         let volume  = waterVolumeTextField.text!
         if volume.isEmpty || current.isEmpty || target.isEmpty {
             fillInFieldsAlert()
+        } else if current > target {
+            currentIsGreaterThanTarget()
         }
     }
     
@@ -239,7 +241,7 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
         present(alertController, animated: true, completion: nil)
     }
     
-    func targetIsGreaterThanCurrent() {
+    func currentIsGreaterThanTarget() {
         let alertController = UIAlertController(title: "Warning", message: "The current value must not be larger than the target value.", preferredStyle: .alert)
         let alert           = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(alert)
