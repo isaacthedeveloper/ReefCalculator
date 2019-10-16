@@ -17,7 +17,7 @@ final class ParameterCell: UICollectionViewCell {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
-    self.layer.cornerRadius  = 30.0
+    self.layer.cornerRadius  = 10.0
     self.layer.borderWidth   = 1.0
     self.layer.borderColor   = UIColor.clear.cgColor
     self.layer.shadowColor   = UIColor.black.cgColor

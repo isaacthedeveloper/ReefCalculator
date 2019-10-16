@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIColor {
-    static let appBackgroundColor = UIColor.white
-  static let colorArray =  [UIColor.systemBlue, UIColor.systemIndigo,UIColor.systemPurple, UIColor.systemPink,  UIColor.systemYellow,  UIColor.systemOrange, UIColor.systemRed, UIColor.systemTeal, UIColor.systemGreen]
-
+    static let appBackgroundColor = UIColor.systemBackground
+    static let colorArray = [UIColor.systemRed, .systemYellow, .systemGreen, .systemBlue, .systemIndigo]
 }

@@ -10,8 +10,8 @@ import UIKit
 
 final class ParameterSelectionViewController: UICollectionViewController {
     let productSegueIdentifier = "goToProductViewController"
-    var flowLayout = ColumnFlowLayout()
-    lazy var parameters = parameterData()
+    var flowLayout              = ColumnFlowLayout()
+    lazy var parameters         = parameterData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ final class ParameterSelectionViewController: UICollectionViewController {
         // Customize navigation bar.
         self.title = "Parameters"
         navController.navigationBar.prefersLargeTitles  = true
-        navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.label]
         // Set up the collection view.
         collectionView.autoresizingMask                 = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor                  = UIColor.appBackgroundColor
