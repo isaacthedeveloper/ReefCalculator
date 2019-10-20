@@ -1,11 +1,22 @@
-# ReefCalculator
-*** Available on the iOS App Store ***
-I built Reef Calculator to determine how much of an elemnt to dose in my reef tank. Corals require a certain Calcium, Alkalinity, and Magnesium levels in order to thrive.
-However, each product on the market has a different dossage, and often times it can be confusing.
+# Reef Calculator
 
-For this app I added all major products on the market, I created the calculations using the ratio of each product, and wrote a simple algorithm to calculate how much of each product is needed.
+Reef Calculator is available the App Store!
 
-The next feature for this app is a To Do list which will be launched mid october.
+**https://apps.apple.com/us/app/reef-calculator/id1481406311**
 
+## Technologies
 
-Technoligies: Swift, SwiftUI, Combine, Storyboards, CollectionView, Table View, 
+* Swift 5
+* Table View 
+* Collection View
+* Storyboards
+* Programatic auto layout
+* Haptic feed back
+
+## Why did I make this?
+Reef tanks are complicated, corals consume Alkalinity, Calcium and Magnesium daily, and in order to keep them alive, you must dose these three elements based on the consumption. 
+
+I built this app so that a user can input the water volume, current level and their target level, then the app will calculate how much to dose based on the criteria. 
+
+There are many products in the app each with different dosing, so the challenge was to determine the ratio of each product to come up with accurate results.
+
