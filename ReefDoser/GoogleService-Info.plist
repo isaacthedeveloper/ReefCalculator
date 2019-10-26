@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1068937948584-9i9cmt4aej99htnvnv0ds77v1f2a12rn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1068937948584-9i9cmt4aej99htnvnv0ds77v1f2a12rn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBFSaxQ7vExYRzLueJdMXdIBrRM1xrqAmY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1068937948584</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.isaacballas.ReefDoser</string>
+	<key>PROJECT_ID</key>
+	<string>reef-calculator</string>
+	<key>STORAGE_BUCKET</key>
+	<string>reef-calculator.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1068937948584:ios:8f276c0f72179ceacc419d</string>
+	<key>DATABASE_URL</key>
+	<string>https://reef-calculator.firebaseio.com</string>
+</dict>
+</plist>

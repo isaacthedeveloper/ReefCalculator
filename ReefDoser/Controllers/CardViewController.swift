@@ -43,7 +43,6 @@ final class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
         configureLabel(for: results)
         // Update the backing image view
         backingImageView.image = backingImage
@@ -51,7 +50,6 @@ final class CardViewController: UIViewController {
         cardView.clipsToBounds = true
         cardView.layer.cornerRadius = 10.0
         cardView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
         indicatorBar.clipsToBounds = true
         indicatorBar.layer.cornerRadius = 3.0
         // Hide the card view at the bottom
@@ -60,11 +58,9 @@ final class CardViewController: UIViewController {
         }
         // Set dimmer view to transparent
         dimmerView.alpha = 0.0
-        
         let dimmerTap = UITapGestureRecognizer(target: self, action: #selector(dimmerViewTapped(_:)))
         dimmerView.addGestureRecognizer(dimmerTap)
         dimmerView.isUserInteractionEnabled = true
-        
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(viewPanned(_:)))
         // iOS causes delay so get rid of it.
         panGesture.delaysTouchesBegan = false
@@ -77,8 +73,7 @@ final class CardViewController: UIViewController {
         showCard()
     }
     
-    
-    public func configureLabel(for results: Double) {
+     private func configureLabel(for results: Double) {
         // Liquid
         let inML = (results/10)
         let inFlOz = ((results * 0.033814)/10)
@@ -100,7 +95,6 @@ final class CardViewController: UIViewController {
             mlGrImage.image   = UIImage(named: "Gram")
             ozLabel.text   = "\(String(format: "%.2f", oz)) ounces"
             ozImage.image     = UIImage(named: "Ounce")
-            
             tspLabel.text  = "\(String(format: "%.2f", tsp)) teaspoons"
             tspImage.image    = UIImage(named: "Teaspoon")
         }

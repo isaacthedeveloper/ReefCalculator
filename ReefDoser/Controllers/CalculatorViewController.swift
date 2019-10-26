@@ -10,9 +10,10 @@ import UIKit
 
 final class CalculatorViewController: UIViewController, UITextFieldDelegate {
     var chosenProduct: ProductName!
-    //var directionsVC: DirectionsViewController?
-    static let identifier = "ShowDetail"
     var result = Double()
+    let generator = UINotificationFeedbackGenerator()
+    static let identifier = "ShowDetail"
+    
     // MARK: - Outlets
     @IBOutlet weak var waterVolumeTextField: UITextField!
     @IBOutlet weak var waterUnitSegmentedControl: UISegmentedControl!
@@ -44,7 +45,6 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         prepareField()
         if let product = chosenProduct { title = product.name }
-        
         waterUnitSegmentedControl.setTitle("Gallons", forSegmentAt: 0)
         waterUnitSegmentedControl.setTitle("Liters", forSegmentAt: 1)
         // selected option color
@@ -59,6 +59,14 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
+         if chosenProduct.productCategory == .phosphate || chosenProduct.productCategory == .trace {
+             configureProducts()
+             
+         } else {
+             checkDataInput()
+             generator.notificationOccurred(.success)
+             configureProducts()
+         }
         guard let cardViewController = storyboard?.instantiateViewController(identifier: "CardViewController") as? CardViewController else {
             assertionFailure("Failed to find a view controlled with ID CardViewController in storyboard")
             return
@@ -77,13 +85,7 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
         
         // iOS13 changed the modal presentation
         cardViewController.modalPresentationStyle = .fullScreen
-        if chosenProduct.productCategory == .phosphate || chosenProduct.productCategory == .trace {
-            configureProducts()
-            
-        } else {
-            checkDataInput()
-            configureProducts()
-        }
+        
         
     }
     
@@ -96,8 +98,10 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
         let target  = targetLevelTextField.text!
         let volume  = waterVolumeTextField.text!
         if volume.isEmpty || current.isEmpty || target.isEmpty {
+            generator.notificationOccurred(.error)
             fillInFieldsAlert()
         } else if current > target {
+            generator.notificationOccurred(.warning)
             currentIsGreaterThanTarget()
         }
     }
@@ -115,11 +119,12 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
             targetLevelLabel.isHidden = true
             currentLevelTextField.isHidden = true
             targetLevelTextField.isHidden = true
+            calculateButton.layer.cornerRadius = 20
         } else {
             waterVolumeTextField.layer.cornerRadius = 40.0
-            currentLevelTextField.layer.cornerRadius = 20.0
-            targetLevelTextField.layer.cornerRadius = 20.0
-            calculateButton.layer.cornerRadius = 40
+            currentLevelTextField.layer.cornerRadius = 10.0
+            targetLevelTextField.layer.cornerRadius = 10.0
+            calculateButton.layer.cornerRadius = 20
         }
     }
     
@@ -188,15 +193,6 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK:- Calculation Methods
-    
-    /// Calculate liquid alkalinity products
-    ///
-    /// - Parameters:
-    ///   - ratio: meq/L that will be raised by adding 1ml per gallon of water.
-    ///   - currentLevel: current alkalinity level.
-    ///   - targetLevel: target alkalinity level.
-    ///   - volume: total water volume.
-    /// - Returns: the calculated dose needed for the parameters.
     func calculateLiquidAlk(with ratio: Double,  from currentLevel: Double, to targetLevel: Double, volume: Double) -> Double {
         let result = (10 * (1/ratio) * (targetLevel - currentLevel) * volume)
         return result
@@ -247,6 +243,7 @@ final class CalculatorViewController: UIViewController, UITextFieldDelegate {
         alertController.addAction(alert)
         present(alertController, animated: true, completion: nil)
     }
+    
     
     
     

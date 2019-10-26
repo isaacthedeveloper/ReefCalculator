@@ -9,7 +9,7 @@
 import UIKit
 
 final class ParameterSelectionViewController: UICollectionViewController {
-    let productSegueIdentifier = "goToProductViewController"
+    static let productSegueIdentifier = "goToProductViewController"
     var flowLayout              = ColumnFlowLayout()
     lazy var parameters         = parameterData()
     
@@ -37,7 +37,7 @@ final class ParameterSelectionViewController: UICollectionViewController {
             fatalError()
         }
         
-        if segue.identifier == productSegueIdentifier {
+        if segue.identifier == ParameterSelectionViewController.productSegueIdentifier {
             if let indexPaths = collectionView.indexPathsForSelectedItems {
                 let indexPath = indexPaths[0]
                 let products = parameters[indexPath.item] as Parameter

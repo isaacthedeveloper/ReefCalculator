@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4501C9BE236378CF00D93EBF /* GraphingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501C9BD236378CF00D93EBF /* GraphingViewController.swift */; };
+		4501C9C0236400CE00D93EBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4501C9BF236400CE00D93EBF /* GoogleService-Info.plist */; };
 		4529E2552346D584009E07B7 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529E2542346D584009E07B7 /* CardViewController.swift */; };
 		454C99BB23199050006A5F04 /* ProductSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C99BA23199050006A5F04 /* ProductSelectionViewController.swift */; };
+		4562755723622C4200F82084 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4562755623622C4200F82084 /* PushButton.swift */; };
 		459600E62328900D0012286A /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459600E52328900D0012286A /* CalculatorViewController.swift */; };
+		45AEEFF6236371F600A829FC /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEEFF5236371F600A829FC /* CounterView.swift */; };
 		45B7617B2346D75E00ED85CA /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7617A2346D75E00ED85CA /* UIView+Snapshot.swift */; };
 		45C3DBAE232711EF005F4A7F /* Parameter&ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C3DBAD232711EF005F4A7F /* Parameter&ProductData.swift */; };
 		45C3F5662318633B00B4269C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C3F5652318633B00B4269C /* AppDelegate.swift */; };
@@ -24,9 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4501C9BD236378CF00D93EBF /* GraphingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphingViewController.swift; sourceTree = "<group>"; };
+		4501C9BF236400CE00D93EBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4529E2542346D584009E07B7 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		454C99BA23199050006A5F04 /* ProductSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductSelectionViewController.swift; path = ReefDoser/Controllers/ProductSelectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		4562755623622C4200F82084 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		459600E52328900D0012286A /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		45AEEFF5236371F600A829FC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		45B7617A2346D75E00ED85CA /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		45C3DBAD232711EF005F4A7F /* Parameter&ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parameter&ProductData.swift"; sourceTree = "<group>"; };
 		45C3F5622318633B00B4269C /* ReefDoser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReefDoser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +86,7 @@
 				45CC23E02318B91500E45BD6 /* Controllers */,
 				45CC23E22318B94300E45BD6 /* Supporting Files */,
 				45C3F5712318633C00B4269C /* Info.plist */,
+				4501C9BF236400CE00D93EBF /* GoogleService-Info.plist */,
 			);
 			path = ReefDoser;
 			sourceTree = "<group>";
@@ -85,8 +94,11 @@
 		45CC23DF2318B90200E45BD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45AEEFF5236371F600A829FC /* CounterView.swift */,
+				4562755623622C4200F82084 /* PushButton.swift */,
 				45C3F57723186ADC00B4269C /* ColumnFlowLayout.swift */,
 				45C3F57923186C2900B4269C /* ParameterCell.swift */,
+				4501C9BD236378CF00D93EBF /* GraphingViewController.swift */,
 				45C3F5692318633B00B4269C /* Main.storyboard */,
 				45C3F56E2318633C00B4269C /* LaunchScreen.storyboard */,
 			);
@@ -190,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C3F5702318633C00B4269C /* LaunchScreen.storyboard in Resources */,
+				4501C9C0236400CE00D93EBF /* GoogleService-Info.plist in Resources */,
 				45C3F56D2318633C00B4269C /* Assets.xcassets in Resources */,
 				45C3F56B2318633B00B4269C /* Main.storyboard in Resources */,
 			);
@@ -206,13 +219,16 @@
 				45C3F5682318633B00B4269C /* ParameterSelectionViewController.swift in Sources */,
 				45C3F57823186ADC00B4269C /* ColumnFlowLayout.swift in Sources */,
 				45B7617B2346D75E00ED85CA /* UIView+Snapshot.swift in Sources */,
+				4501C9BE236378CF00D93EBF /* GraphingViewController.swift in Sources */,
 				45C3F5662318633B00B4269C /* AppDelegate.swift in Sources */,
 				45C3F57E23186D8A00B4269C /* Parameter.swift in Sources */,
 				454C99BB23199050006A5F04 /* ProductSelectionViewController.swift in Sources */,
 				45C3F57C23186D0700B4269C /* Utilities.swift in Sources */,
+				45AEEFF6236371F600A829FC /* CounterView.swift in Sources */,
 				4529E2552346D584009E07B7 /* CardViewController.swift in Sources */,
 				45C3DBAE232711EF005F4A7F /* Parameter&ProductData.swift in Sources */,
 				45C3F57A23186C2900B4269C /* ParameterCell.swift in Sources */,
+				4562755723622C4200F82084 /* PushButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,16 +376,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 2.3;
+				DEVELOPMENT_TEAM = SKR3LP38N7;
 				INFOPLIST_FILE = ReefDoser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.;
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isaacballas.ReefDoser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -383,16 +399,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 2.3;
+				DEVELOPMENT_TEAM = SKR3LP38N7;
 				INFOPLIST_FILE = ReefDoser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.;
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isaacballas.ReefDoser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
