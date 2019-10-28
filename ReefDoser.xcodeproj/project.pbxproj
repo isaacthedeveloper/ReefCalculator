@@ -11,6 +11,7 @@
 		4501C9C0236400CE00D93EBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4501C9BF236400CE00D93EBF /* GoogleService-Info.plist */; };
 		4529E2552346D584009E07B7 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529E2542346D584009E07B7 /* CardViewController.swift */; };
 		454C99BB23199050006A5F04 /* ProductSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C99BA23199050006A5F04 /* ProductSelectionViewController.swift */; };
+		455DBA60236779F2006DA9D8 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455DBA5F236779F2006DA9D8 /* GraphView.swift */; };
 		4562755723622C4200F82084 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4562755623622C4200F82084 /* PushButton.swift */; };
 		459600E62328900D0012286A /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459600E52328900D0012286A /* CalculatorViewController.swift */; };
 		45AEEFF6236371F600A829FC /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEEFF5236371F600A829FC /* CounterView.swift */; };
@@ -32,6 +33,7 @@
 		4501C9BF236400CE00D93EBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4529E2542346D584009E07B7 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		454C99BA23199050006A5F04 /* ProductSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductSelectionViewController.swift; path = ReefDoser/Controllers/ProductSelectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		455DBA5F236779F2006DA9D8 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		4562755623622C4200F82084 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		459600E52328900D0012286A /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		45AEEFF5236371F600A829FC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				45AEEFF5236371F600A829FC /* CounterView.swift */,
+				455DBA5F236779F2006DA9D8 /* GraphView.swift */,
 				4562755623622C4200F82084 /* PushButton.swift */,
 				45C3F57723186ADC00B4269C /* ColumnFlowLayout.swift */,
 				45C3F57923186C2900B4269C /* ParameterCell.swift */,
@@ -220,6 +223,7 @@
 				45C3F57823186ADC00B4269C /* ColumnFlowLayout.swift in Sources */,
 				45B7617B2346D75E00ED85CA /* UIView+Snapshot.swift in Sources */,
 				4501C9BE236378CF00D93EBF /* GraphingViewController.swift in Sources */,
+				455DBA60236779F2006DA9D8 /* GraphView.swift in Sources */,
 				45C3F5662318633B00B4269C /* AppDelegate.swift in Sources */,
 				45C3F57E23186D8A00B4269C /* Parameter.swift in Sources */,
 				454C99BB23199050006A5F04 /* ProductSelectionViewController.swift in Sources */,
